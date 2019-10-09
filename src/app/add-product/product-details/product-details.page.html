@@ -1,0 +1,68 @@
+<ion-content padding>
+<div class="full-screen">
+    <div class="back-button" (click)="backButton()">
+        <i class="fas fa-arrow-left"></i>
+    </div>
+
+    <div class="title">Add Product</div>
+    <div class="sub-title">Product Details</div>
+
+    <div class="form">
+        <ion-item>
+            <ion-label position="stacked">Product Number</ion-label>
+            <ion-input
+                required
+                type="tel"
+                [(ngModel)]="productNumber"
+            ></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="stacked">Product Title</ion-label>
+            <ion-input
+                required
+                type="text"
+                [(ngModel)]="productTitle"
+            ></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="stacked">Product Price</ion-label>
+            <ion-input
+                required
+                type="number"
+                [(ngModel)]="productPrice"
+            ></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="stacked">Categories</ion-label>
+            <ion-select placeholder="Select Category" name="language" [selectedText]="productCategory"
+                (ionChange)="codeSelected()" [(ngModel)]="productCategory">
+                <ion-select-option value="Womens fashion">Womens fashion</ion-select-option>
+                <ion-select-option value="Phones & Telecommunications">Phones & Telecommunications</ion-select-option>
+                <ion-select-option value="Computer, Office, Security">Computer, Office, Security</ion-select-option>
+                <ion-select-option value="Consumer Electronics">Consumer Electronics</ion-select-option>
+                <ion-select-option value="Jewellery & Watches">Jewellery & Watches</ion-select-option>
+                <ion-select-option value="Home, Pet & Appliances">Home, Pet & Appliances</ion-select-option>
+                <ion-select-option value="Bags & Shoes">Bags & Shoes</ion-select-option>
+                <ion-select-option value="Toys, Kids & Babies">Toys, Kids & Babies</ion-select-option>
+                <ion-select-option value="Outdoor Fun & Sports">Outdoor Fun & Sports</ion-select-option>
+                <ion-select-option value="Beauty, Health & Hair">Beauty, Health & Hair</ion-select-option>
+                <ion-select-option value="Automobiles & Motorcycles">Automobiles & Motorcycles</ion-select-option>
+                <ion-select-option value="Home Improvement & Tools">Home Improvement & Tools</ion-select-option>
+              </ion-select>
+        </ion-item>
+    </div>
+
+    <div class="actions">
+            <ion-button
+            expand="block"
+            class="login-button"
+            (click)="addProductDetails()"
+        >
+            Submit
+        </ion-button>
+    </div>
+</div>
+</ion-content>

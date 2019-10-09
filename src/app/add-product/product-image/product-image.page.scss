@@ -1,0 +1,57 @@
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    i {
+        font-size: 1.5em;
+    }
+}
+
+.full-screen {
+    padding: 15px;
+}
+
+.title {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 2em;
+}
+
+.sub-title {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.grid-categories {
+    width: 47%;
+    float: left;
+    border: #3880FF 1px;
+}
+
+.gridAlign {
+    float: left;
+}
+
+.logoutAlign {
+    float: left;
+}
+
+.photos {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    .loadSelectedPhotos {
+        .photo {
+            padding: 10px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+     .add-photo {
+        margin: 10px;
+        border: 1px dashed #3880FF;
+        height: 100px;
+    }
+}
